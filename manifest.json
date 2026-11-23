@@ -1,0 +1,15 @@
+{
+  "name": "Мій Список Справ",
+  "short_name": "Справи",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#c2e9fb",
+  "theme_color": "#c2e9fb",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

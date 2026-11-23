@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: "Lucida Sans", sans-serif;
+    background: linear-gradient(180deg, #c2e9fb 0%, #e0c3fc 100%);
+    min-height: 100vh;
+    margin: 0;
+    padding: 12px;
+}
+
+.container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    border: 3px solid rgb(98, 11, 107);
+    padding-bottom: 25px;
+    padding-top: 0px;
+    background-color:rgb(221, 244, 234)
+}
+
+h1 {
+  font-size: 8vw;
+}
+
+input {
+    width:90%;
+    font-size: 22px;
+    min-height: 48px;
+}
+
+#saveTask ,#deleteTask, #deleteAlltask {
+    min-height: 39px;
+    width: 50%;
+    font-size:18px;
+    border-radius: 4px;
+    background-color: #04AA6D;
+    color: white;
+}
+
+#saveTask:active, #deleteTask:active, #deleteAlltask:active {
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: clamp(20px, 5vw, 26px);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0 10px;
+}
+
+li {
+    display: flex;
+    border-bottom: 1px solid rgb(98, 11, 107);
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    min-height: 40px;
+    font-size: clamp(20px, 3vw, 25px);
+    overflow-wrap: anywhere; 
+    word-break: break-word;
+    padding: 8px 0;
+}
+
+.container2 {
+   display: flex;
+   border: 3px solid rgb(98, 11, 107);
+   flex-direction: column; 
+   background-color:rgb(221, 244, 234);
+}
+
+.downbutton {
+    display: flex;
+    gap:5px;
+    padding: 5px;
+}
+
+.btn {
+    display: flex;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.btndelete, .btncomplate {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    min-width: 32px;
+    min-height: 32px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    border:2px solid rgb(98, 11, 107);
+    background-color: rgb(244, 242, 212);
+    transition: background-color 0.1s, box-shadow 0.1s, transform 0.1s;
+}
+
+.btndelete:active, .btncomplate:active {
+    background-color: rgba(98, 11, 107, 0.15);
+    box-shadow: 0 0 12px rgba(98, 11, 107, 0.4), inset 0 2px 4px rgba(98, 11, 107, 0.25);
+    transform: scale(0.96);
+}
+
+li span {
+    position: relative;
+    display: inline-block;
+    transition: color 0.9s ease, opacity 0.9s ease;
+}
+
+li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(98, 11, 107); 
+    transition: width 0.9s linear; 
+}
+
+li.completed span {
+    color: #777;
+    opacity: 0.9;
+}
+
+li.completed span::after {
+    width: 100%;
+}
+
+#deleteTask, #deleteAlltask {
+    flex: 1;
+    width: auto;
+}
